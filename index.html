@@ -344,15 +344,14 @@
         <p class="ticket-note">30 entradas · Próximamente</p>
       </div>
 
-      <button class="pay" type="button" disabled>
-        CONTINUAR AL PAGO
-      </button>
+    <button id="btnPago" class="pay" type="button">
+  CONTINUAR AL PAGO
+</button>
 
       <p class="notice">
-        Versión de prueba: pagos todavía no habilitados.<br>
-        El precio final y los posibles cargos se informarán
-        antes de pagar.
-      </p>
+  Serás redirigido a Industria Urbana para realizar el pago
+  de forma segura. Cada entrada tendrá su propio código QR.
+</p>
     </section>
 
   </main>
@@ -414,7 +413,10 @@
         actualizar();
       }
     });
-
+document.getElementById("btnPago").addEventListener("click", function() {
+  window.location.href =
+    "https://www.industriaurbana.com.ar/cart-link/1622369542-" + cantidad;
+});
     actualizar();
   </script>
 
