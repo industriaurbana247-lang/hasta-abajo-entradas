@@ -4,228 +4,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080d09">
+
   <title>HASTA ABAJO | Entradas oficiales</title>
+
+  <meta name="description" content="Comprá tus entradas para HASTA ABAJO. Sábado 21 de noviembre de 2026 en Umbra, Quilmes.">
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #080d09;
-      color: #fff;
+      color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
     }
-    .topbar {
-      padding: 22px 5%;
-      border-bottom: 1px solid #28382c;
-      background: #080d09;
+
+    button {
+      font-family: inherit;
     }
+
+    .topbar {
+      background: #0c140e;
+      border-bottom: 1px solid #304034;
+      padding: 22px 30px;
+      text-align: center;
+    }
+
     .brand {
       font-size: 18px;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 3px;
     }
-    .brand span { color: #89ff43; }
+
+    .brand span {
+      color: #89ff43;
+    }
+
     .layout {
       max-width: 1250px;
-      margin: auto;
-      padding: 28px 20px;
+      margin: 0 auto;
+      padding: 35px 20px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
       align-items: start;
     }
+
     .hero {
-      background: linear-gradient(155deg,#182a1a,#050805 70%);
-      border: 1px solid #2b4630;
-      border-radius: 20px;
-      overflow: hidden;
+      min-width: 0;
     }
+
     .flyer {
-      min-height: 440px;
-      padding: 45px 25px;
+      min-height: 520px;
+      padding: 40px 25px;
+      background:
+        radial-gradient(
+          circle at 50% 40%,
+          #234b1d 0%,
+          #101e12 45%,
+          #080d09 100%
+        );
+      border: 1px solid #304034;
+      border-radius: 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background:
-        radial-gradient(circle at 50% 30%,#325e27 0%,transparent 55%),
-        linear-gradient(145deg,#132319,#050805);
+      overflow: hidden;
     }
+
     .eyebrow {
       color: #89ff43;
       font-size: 13px;
-      letter-spacing: 3px;
       font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
     }
+
     .hero-title {
-      font-size: clamp(55px,8vw,100px);
+      font-size: 90px;
       font-weight: 1000;
-      font-style: italic;
-      line-height: .85;
       letter-spacing: -5px;
-      text-shadow: 4px 5px 0 #193b13;
-      margin: 28px 0;
-      transform: rotate(-4deg);
+      line-height: 0.92;
+      text-shadow: 0 5px 25px #000;
     }
-    .hero-title span { color: #89ff43; }
+
+    .hero-title span {
+      color: #89ff43;
+    }
+
+    .flyer p {
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+
     .date {
       color: #89ff43;
-      font-size: 36px;
+      font-size: 42px;
       font-weight: 900;
-      margin-top: 22px;
+      margin-top: 30px;
     }
+
     .venue {
-      font-size: 35px;
+      font-size: 38px;
       font-weight: 900;
+      letter-spacing: 5px;
+      margin-top: 15px;
+    }
+
+    .place {
+      color: #b7c8b8;
+      font-size: 13px;
+      letter-spacing: 3px;
       margin-top: 8px;
     }
-    .place {
-      color: #c0d1c0;
-      letter-spacing: 3px;
-      margin-top: 5px;
-    }
+
     .hero-info {
-      padding: 25px;
-      color: #d3dfd4;
-      line-height: 1.7;
+      padding: 28px 5px;
+      line-height: 1.8;
+      color: #c7d2c8;
     }
-    .ticket-panel {
-      background: #101713;
-      border: 1px solid #304034;
-      border-radius: 20px;
-      padding: 24px;
-    }
-    h1,h2,h3,p { margin-top: 0; }
-    .panel-title {
+
+    .hero-info h2 {
       color: #89ff43;
-      font-size: clamp(25px,3vw,35px);
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    .hero-info strong {
+      color: #ffffff;
+    }
+
+    .ticket-panel {
+      background: #111a14;
+      border: 1px solid #304034;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .panel-title {
+      font-size: 27px;
+      margin: 0 0 10px;
       font-weight: 900;
-      margin-bottom: 8px;
     }
-    .muted { color: #bac8bc; }
+
+    .muted {
+      color: #a7b5a8;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
     .ticket {
-      padding: 20px;
-      border: 1px solid #36483a;
-      border-radius: 14px;
-      margin-top: 16px;
-      background: #151e17;
+      position: relative;
+      background: #0b110d;
+      border: 1px solid #304034;
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 17px;
     }
+
     .ticket.active {
       border: 2px solid #89ff43;
-      background: #19271b;
+      background: #132017;
     }
-    .ticket.locked { opacity: .65; }
+
+    .ticket.locked {
+      opacity: 0.5;
+    }
+
     .tag {
       display: inline-block;
       background: #89ff43;
-      color: #071007;
-      font-size: 11px;
-      font-weight: 900;
+      color: #0b1309;
       border-radius: 5px;
       padding: 7px 10px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
       margin-bottom: 15px;
     }
-    .tag.off { background: #526055; color: #fff; }
+
+    .tag.off {
+      background: #455247;
+      color: #ffffff;
+    }
+
     .ticket-main {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      gap: 10px;
     }
+
     .ticket h3 {
-      font-size: 21px;
-      margin-bottom: 6px;
+      font-size: 19px;
+      margin: 0 0 8px;
     }
+
     .price {
-      color: #89ff43;
-      font-size: 31px;
+      font-size: 34px;
       font-weight: 900;
+      color: #89ff43;
     }
+
     .counter {
       display: flex;
       align-items: center;
-      gap: 0;
-      flex-shrink: 0;
+      gap: 8px;
     }
+
     .counter button {
       width: 42px;
-      height: 44px;
-      border: 1px solid #718075;
-      background: #27312a;
-      color: #fff;
-      font-size: 25px;
+      height: 42px;
+      border: 1px solid #89ff43;
+      border-radius: 10px;
+      background: #18291b;
+      color: #89ff43;
+      font-size: 24px;
+      font-weight: bold;
       cursor: pointer;
     }
-    .counter button:first-child {
-      border-radius: 8px 0 0 8px;
-    }
-    .counter button:last-child {
-      border-radius: 0 8px 8px 0;
-    }
+
     .counter button:disabled {
-      opacity: .35;
       cursor: not-allowed;
+      opacity: 0.35;
     }
+
     .counter output {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-top: 1px solid #718075;
-      border-bottom: 1px solid #718075;
-      font-size: 18px;
+      display: inline-block;
+      width: 38px;
+      text-align: center;
+      font-size: 22px;
       font-weight: bold;
     }
+
     .ticket-note {
-      color: #c6d4c8;
-      font-size: 13px;
-      margin: 12px 0 0;
+      font-size: 12px;
+      color: #a9b6aa;
+      margin: 16px 0 0;
     }
+
     .subtotal {
+      border-top: 1px solid #304034;
+      margin-top: 22px;
+      padding-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid #465b48;
-      margin-top: 20px;
-      padding-top: 15px;
-      font-weight: bold;
+      gap: 10px;
     }
+
+    .subtotal span {
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
     .subtotal strong {
       color: #89ff43;
       font-size: 28px;
     }
+
     .pay {
       display: block;
       width: 100%;
-      padding: 20px;
+      padding: 20px 15px;
+      margin-top: 24px;
+      border: 0;
+      border-radius: 12px;
       background: #89ff43;
       color: #091009;
-      border: none;
-      border-radius: 12px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 900;
-      margin-top: 20px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
+
+    .pay:hover {
+      background: #b3ff80;
+    }
+
     .pay:disabled {
-      opacity: .6;
-      cursor: not-allowed;
+      opacity: 0.5;
+      cursor: wait;
     }
+
     .notice {
-      text-align: center;
+      color: #aab8ab;
       font-size: 12px;
-      color: #b7c9b9;
-      line-height: 1.6;
-      margin-top: 14px;
+      line-height: 1.7;
+      text-align: center;
+      margin-top: 18px;
     }
+
     .info-grid {
       max-width: 1250px;
       margin: 0 auto 40px;
       padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
     }
+
     .info-card {
       background: #111a14;
       border: 1px solid #304034;
@@ -233,7 +319,11 @@
       padding: 24px;
       line-height: 1.7;
     }
-    .info-card h3 { color: #89ff43; }
+
+    .info-card h3 {
+      color: #89ff43;
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -241,131 +331,221 @@
       color: #9aab9d;
       font-size: 12px;
     }
-    @media(max-width:800px) {
-      .layout { grid-template-columns: 1fr; padding: 15px; }
-      .flyer { min-height: 350px; }
-      .hero-title { font-size: 75px; }
-      .ticket-panel { padding: 16px; }
-      .info-grid { grid-template-columns: 1fr; padding: 0 15px; }
+
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 15px;
+      }
+
+      .flyer {
+        min-height: 350px;
+      }
+
+      .hero-title {
+        font-size: 75px;
+      }
+
+      .ticket-panel {
+        padding: 16px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+      }
     }
-    @media(max-width:380px) {
-      .price { font-size: 25px; }
-      .counter button { width: 36px; }
-      .counter output { width: 34px; }
+
+    @media (max-width: 380px) {
+      .price {
+        font-size: 25px;
+      }
+
+      .counter button {
+        width: 36px;
+      }
+
+      .counter output {
+        width: 34px;
+      }
+
+      .hero-title {
+        font-size: 60px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header class="topbar">
-    <div class="brand">INDUSTRIA <span>URBANA</span></div>
+    <div class="brand">
+      INDUSTRIA <span>URBANA</span>
+    </div>
   </header>
 
   <main class="layout">
 
     <section class="hero">
+
       <div class="flyer">
-        <div class="eyebrow">REGGAETÓN VIEJA ESCUELA</div>
-        <div class="hero-title">
-          HASTA<br><span>ABAJO ↓</span>
+        <div class="eyebrow">
+          REGGAETÓN VIEJA ESCUELA
         </div>
+
+        <div class="hero-title">
+          HASTA<br>
+          <span>ABAJO ↓</span>
+        </div>
+
         <p>¡LA FIESTA QUE ESTABAS ESPERANDO!</p>
+
         <div class="date">21.11.2026</div>
         <div class="venue">UMBRA</div>
         <div class="place">QUILMES CENTRO</div>
       </div>
+
       <div class="hero-info">
         <h2>EL REGRESO DEL PERREO</h2>
+
         <p>
-          Una noche para bailar, cantar y revivir los clásicos
-          que marcaron una generación.
+          Una noche para bailar, cantar y revivir
+          los clásicos que marcaron una generación.
         </p>
+
         <p>
           Reggaetón de la vieja escuela, grandes éxitos
           y toda la energía de HASTA ABAJO.
         </p>
-        <p><strong>¿HASTA DÓNDE VAS? HASTA ABAJO.</strong></p>
+
+        <p>
+          <strong>
+            ¿HASTA DÓNDE VAS? HASTA ABAJO.
+          </strong>
+        </p>
       </div>
+
     </section>
 
     <section class="ticket-panel">
-      <h1 class="panel-title">COMPRÁ TUS ENTRADAS</h1>
-      <p class="muted">Entradas por tandas con cupos limitados.</p>
+
+      <h1 class="panel-title">
+        COMPRÁ TUS ENTRADAS
+      </h1>
+
+      <p class="muted">
+        Entradas por tandas con cupos limitados.
+      </p>
 
       <div class="ticket active">
+
         <span class="tag">PRIMERA TANDA</span>
+
         <div class="ticket-main">
           <div>
             <h3>PREVENTA 1</h3>
             <div class="price">$10.000</div>
           </div>
+
           <div class="counter">
-            <button id="minus" type="button" aria-label="Quitar entrada">−</button>
+            <button id="minus" type="button"
+              aria-label="Quitar entrada">−</button>
+
             <output id="quantity" aria-live="polite">1</output>
-            <button id="plus" type="button" aria-label="Agregar entrada">+</button>
+
+            <button id="plus" type="button"
+              aria-label="Agregar entrada">+</button>
           </div>
         </div>
-        <p class="ticket-note">Cupo total: 50 entradas</p>
+
+        <p class="ticket-note">
+          Cupo total: 50 entradas
+        </p>
+
         <div class="subtotal">
           <span>TOTAL</span>
           <strong id="total">$10.000</strong>
         </div>
+
       </div>
 
       <div class="ticket locked">
         <span class="tag off">SEGUNDA TANDA</span>
+
         <div class="ticket-main">
           <div>
             <h3>PREVENTA 2</h3>
             <div class="price">$15.000</div>
           </div>
+
           <div class="counter">
             <button disabled>−</button>
             <output>0</output>
             <button disabled>+</button>
           </div>
         </div>
-        <p class="ticket-note">40 entradas · Próximamente</p>
+
+        <p class="ticket-note">
+          40 entradas · Próximamente
+        </p>
       </div>
 
       <div class="ticket locked">
         <span class="tag off">TERCERA TANDA</span>
+
         <div class="ticket-main">
           <div>
             <h3>PREVENTA 3</h3>
             <div class="price">$18.000</div>
           </div>
+
           <div class="counter">
             <button disabled>−</button>
             <output>0</output>
             <button disabled>+</button>
           </div>
         </div>
-        <p class="ticket-note">30 entradas · Próximamente</p>
+
+        <p class="ticket-note">
+          30 entradas · Próximamente
+        </p>
       </div>
 
-    <button id="btnPago" class="pay" type="button">
-  CONTINUAR AL PAGO
-</button>
+      <button
+        id="btnPago"
+        class="pay"
+        type="button">
+        CONTINUAR AL PAGO
+      </button>
 
       <p class="notice">
-  Serás redirigido a Industria Urbana para realizar el pago
-  de forma segura. Cada entrada tendrá su propio código QR.
-</p>
+        Serás redirigido a Industria Urbana para realizar
+        el pago de forma segura. Cada entrada tendrá
+        su propio código QR.
+      </p>
+
     </section>
 
   </main>
 
   <section class="info-grid">
+
     <div class="info-card">
       <h3>📍 UBICACIÓN</h3>
-      <p>UMBRA<br>Quilmes Centro, Buenos Aires.</p>
+      <p>
+        UMBRA<br>
+        Quilmes Centro, Buenos Aires.
+      </p>
     </div>
+
     <div class="info-card">
       <h3>📅 FECHA</h3>
-      <p>Sábado 21 de noviembre de 2026.</p>
+      <p>
+        Sábado 21 de noviembre de 2026.
+      </p>
       <p>Horario a confirmar.</p>
     </div>
+
     <div class="info-card">
       <h3>🎟️ IMPORTANTE</h3>
       <p>
@@ -375,6 +555,7 @@
         Un ingreso por entrada.
       </p>
     </div>
+
   </section>
 
   <footer>
@@ -384,15 +565,27 @@
   <script>
     const precio = 10000;
     const maximo = 50;
+
     let cantidad = 1;
 
-    const cantidadTexto = document.getElementById("quantity");
-    const totalTexto = document.getElementById("total");
-    const menos = document.getElementById("minus");
-    const mas = document.getElementById("plus");
+    const cantidadTexto =
+      document.getElementById("quantity");
+
+    const totalTexto =
+      document.getElementById("total");
+
+    const menos =
+      document.getElementById("minus");
+
+    const mas =
+      document.getElementById("plus");
+
+    const btnPago =
+      document.getElementById("btnPago");
 
     function actualizar() {
       cantidadTexto.textContent = cantidad;
+
       totalTexto.textContent =
         "$" + (cantidad * precio).toLocaleString("es-AR");
 
@@ -413,13 +606,21 @@
         actualizar();
       }
     });
-document.getElementById("btnPago").addEventListener("click", function() {
-  window.location.href =
-    "https://www.industriaurbana.com.ar/cart-link/1622369542-" + cantidad;
-});
+
+    btnPago.addEventListener("click", function() {
+      const enlace =
+        "https://www.industriaurbana.com.ar/cart-link/1622369542-" +
+        cantidad;
+
+      btnPago.disabled = true;
+      btnPago.textContent = "REDIRIGIENDO AL PAGO...";
+
+      // Navegar en la pestaña actual.
+      window.location.replace(enlace);
+    });
+
     actualizar();
   </script>
 
 </body>
 </html>
-
